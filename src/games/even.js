@@ -1,5 +1,7 @@
 import playGame from '../index.js';
 
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
+
 const isEven = (num) => num % 2 === 0;
 
 const getRound = () => {
@@ -10,7 +12,7 @@ const getRound = () => {
 };
 
 export default () => {
-  playGame('Answer "yes" if the number is even, otherwise answer "no".', getRound);
+  playGame(description, getRound);
 };
 
 /* const playEvenGame = () => {
