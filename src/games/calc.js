@@ -1,6 +1,7 @@
 import playGame from '../index.js';
 
 const operators = ['+', '-', '*'];
+const description = 'What is the result of the expression?';
 
 const getRound = () => {
   const num1 = Math.floor((Math.random() * 100) + 1);
@@ -30,5 +31,5 @@ const getRound = () => {
 };
 
 export default () => {
-  playGame('What is the result of the expression?', getRound);
+  playGame(description, getRound);
 };
