@@ -5,9 +5,8 @@
 **Frontend Project 44** — Это интерактивное приложение я разработала в рамках курса на Hexlet. Цель проекта — прокачать навыки работы с JavaScript и другими современными технологиями. В приложении есть несколько мини-игр, которые запускаются через командную строку. Эти игры помогают тренировать логику и решать математические задачи.
 
 ### Setup:
-git clone git@github.com:elvis178/frontend-project-44.git<br>
+git clone https://github.com/elvis178/frontend-project-44.git<br>
 make install
-
 
 ## Demo
 [![asciicast](https://asciinema.org/a/eitiSPGk979xpSb9S7VhIVyyP.svg)](https://asciinema.org/a/eitiSPGk979xpSb9S7VhIVyyP)
