@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/elvis178/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/elvis178/frontend-project-44/actions)",
+  "description": "An interactive CLI application developed as part of a Hexlet course. It includes several mini-games to enhance JavaScript skills through logic and math challenges.",
   "main": "index.js",
   "type": "module",
   "scripts": {
