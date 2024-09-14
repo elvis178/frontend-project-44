@@ -1,18 +1,19 @@
 import playGame from '../index.js';
+import getRandomNumber from '../utils.js';
 
 const description = 'What number is missing in the progression?';
 
 const getRound = () => {
-  const start = Math.floor((Math.random() * 100) + 1);
-  const step = Math.floor((Math.random() * 10) + 1);
-  const length = Math.floor((Math.random() * 6) + 5);
+  const start = getRandomNumber(1, 100);
+  const step = getRandomNumber(1, 10);
+  const length = getRandomNumber(5, 10);
 
   const progression = [];
   for (let i = 0; i < length; i += 1) {
     progression.push(start + i * step);
   }
 
-  const hiddenIndex = Math.floor(Math.random() * progression.length);
+  const hiddenIndex = getRandomNumber(0, progression.length - 1);
   const correctAnswer = String(progression[hiddenIndex]);
 
   progression[hiddenIndex] = '..';
