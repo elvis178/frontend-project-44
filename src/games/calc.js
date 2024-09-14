@@ -1,34 +1,31 @@
 import playGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const operators = ['+', '-', '*'];
 const description = 'What is the result of the expression?';
 
-const getRound = () => {
-  const num1 = getRandomNumber(1, 100);
-  const num2 = getRandomNumber(1, 100);
-  const operator = operators[getRandomNumber(0, operators.length - 1)];
-
-  let question;
-  let correctAnswer;
-
+const calculate = (firstNumber, secondNumber, operator) => {
   switch (operator) {
     case '+':
-      question = `${num1} + ${num2}`;
-      correctAnswer = String(num1 + num2);
-      break;
+      return firstNumber + secondNumber;
     case '-':
-      question = `${num1} - ${num2}`;
-      correctAnswer = String(num1 - num2);
-      break;
+      return firstNumber - secondNumber;
     case '*':
-      question = `${num1} * ${num2}`;
-      correctAnswer = String(num1 * num2);
-      break;
+      return firstNumber * secondNumber;
     default:
       throw new Error(`Unexpected operator: ${operator}`);
   }
-  return [question, correctAnswer];
+};
+
+const getRound = () => {
+  const firstNumber = getRandomNumber(1, 100);
+  const secondNumber = getRandomNumber(1, 100);
+  const operators = ['+', '-', '*'];
+  const operator = operators[getRandomNumber(0, operators.length - 1)];
+
+  const question = `${firstNumber} ${operator} ${secondNumber}`;
+  const answer = String(calculate(firstNumber, secondNumber, operator));
+
+  return [question, answer];
 };
 
 export default () => {
