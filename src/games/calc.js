@@ -1,12 +1,13 @@
 import playGame from '../index.js';
+import getRandomNumber from '../utils.js';
 
 const operators = ['+', '-', '*'];
 const description = 'What is the result of the expression?';
 
 const getRound = () => {
-  const num1 = Math.floor((Math.random() * 100) + 1);
-  const num2 = Math.floor((Math.random() * 100) + 1);
-  const operator = operators[Math.floor(Math.random() * operators.length)];
+  const num1 = getRandomNumber(1, 100);
+  const num2 = getRandomNumber(1, 100);
+  const operator = operators[getRandomNumber(0, operators.length - 1)];
 
   let question;
   let correctAnswer;
