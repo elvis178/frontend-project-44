@@ -7,9 +7,9 @@ const isEven = (num) => num % 2 === 0;
 
 const getRound = () => {
   const randomNumber = getRandomNumber(1, 100);
-  const correctAnswer = isEven(randomNumber) ? 'yes' : 'no';
+  const answer = isEven(randomNumber) ? 'yes' : 'no';
   const question = `${randomNumber}`;
-  return [question, correctAnswer];
+  return [question, answer];
 };
 
 export default () => {
