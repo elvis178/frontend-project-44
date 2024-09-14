@@ -21,9 +21,9 @@ const isPrime = (num) => {
 };
 const getRound = () => {
   const randomNumber = getRandomNumber(1, 100);
-  const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
-  const question = `${randomNumber}`;
-  return [question, correctAnswer];
+  const answer = isPrime(randomNumber) ? 'yes' : 'no';
+  const question = String(randomNumber);
+  return [question, answer];
 };
 
 export default () => {
